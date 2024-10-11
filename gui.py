@@ -20,7 +20,7 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 # Window Icon Setup
-logo = Image.open(resource_path("logo.png"))
+logo = Image.open(resource_path("./logo.png"))
 logo = logo.resize((64, 64), Image.LANCZOS)
 logo = ImageTk.PhotoImage(logo)
 root.iconphoto(False, logo)
