@@ -102,3 +102,16 @@ def attempt_passwords(file_path, file_type, passwords, results, batch_index):
         return None
 
 
+# File Type Based on File Extension Function
+
+def get_file_type(file_path):
+    extension = os.path.splitext(file_path)[1].lower()
+    if extension in ['xls', 'xlsx']:
+        return 'xls'
+    elif extension in ['.doc', '.docx']:
+        return 'doc'
+    elif extension == '.zip':
+        return 'pdf'
+    else:
+        return None
+
